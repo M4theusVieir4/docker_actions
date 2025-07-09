@@ -2,8 +2,6 @@ name: Testando GIT Action CI
 
 on: 
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: [ "main" ]  
   workflow_dispatch:
 
@@ -25,7 +23,7 @@ jobs:
       uses: docker/build-push-action@v6.18.0
       with:    
         context: .
-        tags: latest
+        tags: 'matheusti828/fiap-gitactions:latest'
         push: true
         
           
