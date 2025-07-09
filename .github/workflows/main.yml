@@ -8,7 +8,7 @@ on:
 jobs:
   test_job:
     name: Executando o Job de Teste
-    runs-on: ubuntu-hosted
+    runs-on: ubuntu-latest
     steps:
     - name: Step 1
       uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
       uses: docker/login-action@v3.4.0
       with:          
         username: 'matheusti828'          
-        password: ${{ secrets.SECRET}}
+        password: ${{ secrets.SECRET }}
 
     - name: Build and Push Docker images      
       uses: docker/build-push-action@v6.18.0
