@@ -20,6 +20,14 @@ jobs:
       with:          
         username: 'matheusti828'          
         password: ${{ secrets.SECRET}}
+
+    - name: Build and Push Docker images      
+      uses: docker/build-push-action@v6.18.0
+      with:    
+        context: .
+        tags: latest
+        push: true
+        
           
           
  
